@@ -22,53 +22,63 @@
     <link rel="shortcut icon" href="./assets/fav-icon.png" type="image/png">
     <title>Payooo</title>
 </head>
-<body class="bg-[#f4f5f7] h-[100vh] flex flex-col items-center font-[Outfit]">
-   <header class="max-w-[550px] bg-white">
-    <nav class="flex justify-between p-5 border-b">
+<body class="bg-[#f4f5f7]font-[Outfit]">
+   <header class="max-w-[450px] mx-auto bg-white">
+    <nav class="flex justify-between items-center p-5">
         <div class="flex items-center gap-1">
             <img src="./assets/logo.png" alt="logo">
             <div>
-                <h1>৳ <span>20000</span></h1>
+                <h1 class="font-extrabold text-lg">৳ <span id="balance">20000</span></h1>
                 <p>Available Balance</p>
             </div>            
         </div>
-        <button type="button">
-            <i class="fa-solid fa-right-from-bracket rotate-180"></i>
-            Log Out
+        <div>
+            <button type="button" class="border p-3 rounded-lg text-[#080808] opacity-50 font-semibold">
+            <i class="fa-solid fa-right-from-bracket rotate-180"></i> Log Out          
         </button>
+        </div>           
     </nav>
-   </header>
-   <main class="max-w-[550px] bg-white mt-6">
+   </header><hr>   
+   <main class="max-w-[450px] mx-auto bg-white mt-6">
     <section class="my-3">
         <h2 class="font-bold">🔥 Welcome to Payooo!</h2>
         <p>Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
     </section>
     <section class="grid grid-cols-3 gap-3">
-        <div class="border border-gray-500 p-2 rounded-2xl flex flex-col items-center">
-            <img src="./assets/money1.png" alt="money1">
+        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+            <img src="./assets/addMoney.png" alt="addMoney" class="mx-auto">
             <p>Add Money</p>
         </div>
-        <div class="border border-gray-500 p-2 rounded-2xl flex flex-col items-center">
-            <img src="./assets/money1.png" alt="money1">
+        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+            <img src="./assets/cashOut.png" alt="cashOut" class="mx-auto">
             <p>Add Money</p>
         </div>
-        <div class="border border-gray-500 p-2 rounded-2xl flex flex-col items-center">
-            <img src="./assets/money1.png" alt="money1">
+        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+            <img src="./assets/transferMoney.png" alt="transferMoney" class="mx-auto">
             <p>Add Money</p>
         </div>
-        <div class="border border-gray-500 p-2 rounded-2xl flex flex-col items-center">
-            <img src="./assets/money1.png" alt="money1">
+        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+            <img src="./assets/getBonus.png" alt="getBonus" class="mx-auto">
             <p>Add Money</p>
         </div>
-        <div class="border border-gray-500 p-2 rounded-2xl flex flex-col items-center">
-            <img src="./assets/money1.png" alt="money1">
+        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+            <img src="./assets/payBill.png" alt="payBill" class="mx-auto">
             <p>Add Money</p>
         </div>
-        <div class="border border-gray-500 p-2 rounded-2xl flex flex-col items-center">
-            <img src="./assets/money1.png" alt="money1">
+        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+            <img src="./assets/transactions.png" alt="transactions" class="mx-auto">
             <p>Add Money</p>
         </div>
     </section>
+    <section>
+        <form class="p-8 rounded-3xl bg-white">                  
+            <input type="number" name="inp-money" id="inp-money" placeholder="How much money you need"
+                class="bg-[#F4F5F7] py-4 px-5 rounded-full my-5  w-full"><br>
+            <button type="button" id="btn-addMoney"
+                class="w-full bg-[#0874F2] px-5 py-4 rounded-full text-white font-semibold text-xl">Add Money</button>
+        </form>
+    </section>
    </main>
+   <script src="./script/home.js"></script>
 </body>
 </html>
