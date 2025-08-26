@@ -73,11 +73,11 @@
             </div>
         </section>
         <section>
+            <h1 class="font-semibold text-2xl my-4">Add Money</h1>
             <form class="p-5 rounded-3xl bg-white">
-                <!-- Add Money -->
-                <h1 class="font-semibold text-2xl my-4">Add Money</h1>
+                <!-- Add Money -->                
                 <label for="inp-bank" class="font-semibold text-lg">Select a Bank</label><br>
-                <select id="inp-bank" class="bg-[#F4F5F7] py-4 px-5 rounded-full my-2  w-full">
+                <select id="inp-bank" required class="bg-[#F4F5F7] py-4 px-5 rounded-full my-2 w-full">
                     <option>Select bank</option>
                     <option>IFIC Bank</option>
                     <option>Bangladesh Bank</option>
@@ -86,19 +86,19 @@
                 </select>
 
                 <label for="inp-bank-num" class="font-semibold text-lg">Bank Account Number</label><br>
-                <input type="number" name="inp-bank-num" id="inp-bank-num" placeholder="Enter 11 digit account number"
+                <input type="number" name="inp-bank-num" required id="inp-bank-num" placeholder="Enter 11 digit account number"
                     class="bg-[#F4F5F7] py-4 px-5 rounded-full my-5 w-full"><br>
 
                 <label for="inp-phn-money" class="font-semibold text-lg">Amount to Add</label><br>
-                <input type="number" name="inp-money" id="inp-money" placeholder="Add Amount to add"
+                <input type="number" name="inp-money" required id="inp-money" placeholder="Add Amount to add"
                     class="bg-[#F4F5F7] py-4 px-5 rounded-full my-5  w-full"><br>
 
                 <label for="inp-pin" class="font-semibold text-lg">Pin Number</label><br>
-                <input type="number" name="inp-pin" id="inp-pin" placeholder="Enter 4 digit pin number"
+                <input type="number" name="inp-pin" required id="inp-pin" placeholder="Enter 4 digit pin number"
                     class="bg-[#F4F5F7] py-4 px-5 rounded-full my-5  w-full"><br>
 
                 <button type="button" id="btn-addMoney"
-                    class="w-full bg-[#0874F2] px-5 py-4 rounded-full text-white font-semibold text-xl cursor-pointer">Add
+                    class="w-full bg-[#0874F2] hover:bg-[#0894f2] px-5 py-4 rounded-full text-white font-semibold text-xl cursor-pointer">Add
                     Money</button>
             </form>
         </section>
