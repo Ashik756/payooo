@@ -17,68 +17,92 @@
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
-        }       
+        }
     </style>
     <link rel="shortcut icon" href="./assets/fav-icon.png" type="image/png">
     <title>Payooo</title>
 </head>
-<body class="bg-[#f4f5f7]font-[Outfit]">
-   <header class="max-w-[450px] mx-auto bg-white">
-    <nav class="flex justify-between items-center p-5">
-        <div class="flex items-center gap-1">
-            <img src="./assets/logo.png" alt="logo">
+
+<body class="bg-[#f4f5f7] font-[Outfit]">
+    <header class="max-w-lg mx-auto bg-white rounded-b-3xl shadow">
+        <nav class="flex justify-between items-center p-5">
+            <div class="flex items-center gap-1">
+                <img src="./assets/logo.png" alt="logo">
+                <div>
+                    <h1 class="font-extrabold text-lg">৳ <span id="balance">20000</span></h1>
+                    <p>Available Balance</p>
+                </div>
+            </div>
             <div>
-                <h1 class="font-extrabold text-lg">৳ <span id="balance">20000</span></h1>
-                <p>Available Balance</p>
-            </div>            
-        </div>
-        <div>
-            <button type="button" class="border p-3 rounded-lg text-[#080808] opacity-50 font-semibold">
-            <i class="fa-solid fa-right-from-bracket rotate-180"></i> Log Out          
-        </button>
-        </div>           
-    </nav>
-   </header><hr>   
-   <main class="max-w-[450px] mx-auto bg-white mt-6">
-    <section class="my-3">
-        <h2 class="font-bold">🔥 Welcome to Payooo!</h2>
-        <p>Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
-    </section>
-    <section class="grid grid-cols-3 gap-3">
-        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
-            <img src="./assets/addMoney.png" alt="addMoney" class="mx-auto">
-            <p>Add Money</p>
-        </div>
-        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
-            <img src="./assets/cashOut.png" alt="cashOut" class="mx-auto">
-            <p>Add Money</p>
-        </div>
-        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
-            <img src="./assets/transferMoney.png" alt="transferMoney" class="mx-auto">
-            <p>Add Money</p>
-        </div>
-        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
-            <img src="./assets/getBonus.png" alt="getBonus" class="mx-auto">
-            <p>Add Money</p>
-        </div>
-        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
-            <img src="./assets/payBill.png" alt="payBill" class="mx-auto">
-            <p>Add Money</p>
-        </div>
-        <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
-            <img src="./assets/transactions.png" alt="transactions" class="mx-auto">
-            <p>Add Money</p>
-        </div>
-    </section>
-    <section>
-        <form class="p-8 rounded-3xl bg-white">                  
-            <input type="number" name="inp-money" id="inp-money" placeholder="How much money you need"
-                class="bg-[#F4F5F7] py-4 px-5 rounded-full my-5  w-full"><br>
-            <button type="button" id="btn-addMoney"
-                class="w-full bg-[#0874F2] px-5 py-4 rounded-full text-white font-semibold text-xl">Add Money</button>
-        </form>
-    </section>
-   </main>
-   <script src="./script/home.js"></script>
+                <button type="button" id="btn-logout"
+                    class="border p-3 rounded-lg text-[#080808] opacity-50 font-semibold cursor-pointer">
+                    <i class="fa-solid fa-right-from-bracket rotate-180"></i> Log Out
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="max-w-lg mx-auto bg-white mt-3 p-5 rounded-3xl shadow">
+        <section class="my-3">
+            <h2 class="font-bold text-2xl my-2.5 text-center">🔥 Welcome to Payooo!</h2>
+            <p>Enjoy easy and convenient financial services with us. Cashout charge is low and</p>
+        </section>
+        <section class="grid grid-cols-3 gap-3">
+            <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+                <img src="./assets/addMoney.png" alt="addMoney" class="mx-auto">
+                <p>Add Money</p>
+            </div>
+            <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+                <img src="./assets/cashOut.png" alt="cashOut" class="mx-auto">
+                <p>Cashout</p>
+            </div>
+            <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+                <img src="./assets/transferMoney.png" alt="transferMoney" class="mx-auto">
+                <p>Transfer Money </p>
+            </div>
+            <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+                <img src="./assets/getBonus.png" alt="getBonus" class="mx-auto">
+                <p>Get Bonus</p>
+            </div>
+            <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+                <img src="./assets/payBill.png" alt="payBill" class="mx-auto">
+                <p>Pay Bill</p>
+            </div>
+            <div class="border border-gray-500 p-2.5 rounded-2xl text-center">
+                <img src="./assets/transactions.png" alt="transactions" class="mx-auto">
+                <p>Transactions</p>
+            </div>
+        </section>
+        <section>
+            <form class="p-5 rounded-3xl bg-white">
+                <!-- Add Money -->
+                <h1 class="font-semibold text-2xl my-4">Add Money</h1>
+                <label for="inp-bank" class="font-semibold text-lg">Select a Bank</label><br>
+                <select id="inp-bank" class="bg-[#F4F5F7] py-4 px-5 rounded-full my-2  w-full">
+                    <option>Select bank</option>
+                    <option>IFIC Bank</option>
+                    <option>Bangladesh Bank</option>
+                    <option>Islami Bank</option>
+                    <option>DBBL Bank</option>
+                </select>
+
+                <label for="inp-bank-num" class="font-semibold text-lg">Bank Account Number</label><br>
+                <input type="number" name="inp-bank-num" id="inp-bank-num" placeholder="Enter 11 digit account number"
+                    class="bg-[#F4F5F7] py-4 px-5 rounded-full my-5 w-full"><br>
+
+                <label for="inp-phn-money" class="font-semibold text-lg">Amount to Add</label><br>
+                <input type="number" name="inp-money" id="inp-money" placeholder="Add Amount to add"
+                    class="bg-[#F4F5F7] py-4 px-5 rounded-full my-5  w-full"><br>
+
+                <label for="inp-pin" class="font-semibold text-lg">Pin Number</label><br>
+                <input type="number" name="inp-pin" id="inp-pin" placeholder="Enter 4 digit pin number"
+                    class="bg-[#F4F5F7] py-4 px-5 rounded-full my-5  w-full"><br>
+
+                <button type="button" id="btn-addMoney"
+                    class="w-full bg-[#0874F2] px-5 py-4 rounded-full text-white font-semibold text-xl cursor-pointer">Add
+                    Money</button>
+            </form>
+        </section>
+        <script src="./script/home.js"></script>
 </body>
+
 </html>
